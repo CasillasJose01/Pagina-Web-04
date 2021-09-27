@@ -1,0 +1,60 @@
+.header{
+    background-color: $verde; 
+    padding: 2;  
+
+    @include telefono{
+        background-color: $verde;
+    }
+    @include tablet{
+        background-color: $rosa;
+    }
+    @include desktop{
+        background-color: $verde;
+    }
+
+
+    .contenido-header{
+
+        padding: 3;
+
+        @include telefono{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+      
+        
+
+
+        }
+   
+    h1{
+       color: $blanco;
+       margin-bottom: 1rem;
+       text-align: center;
+       @include tablet{
+           margin-bottom: 0;
+       }
+    }
+    &.fijo{
+        width: 100%;
+        position: fixed;
+        box-shadow: 0 .3rem .4rem #444;
+    }
+
+}  
+.navegacion-principal{
+        display: flex;
+        gap: 2rem;
+        a{
+         color: $blanco;
+         font-size: 2rem;
+         
+
+            &:hover{
+                color: $amarillo;
+               
+            }
+        }
+}  
